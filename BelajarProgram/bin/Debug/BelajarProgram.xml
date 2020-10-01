@@ -37,7 +37,27 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:BelajarProgram.DataSet1.msbrgDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BelajarProgram.DataSet1.mssupplierDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:BelajarProgram.DataSet1.tbJenisRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BelajarProgram.DataSet1.msbrgRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BelajarProgram.DataSet1.mssupplierRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -47,7 +67,27 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:BelajarProgram.DataSet1.msbrgRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BelajarProgram.DataSet1.mssupplierRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:BelajarProgram.DataSet1TableAdapters.tbJenisTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BelajarProgram.DataSet1TableAdapters.msbrgTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BelajarProgram.DataSet1TableAdapters.mssupplierTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

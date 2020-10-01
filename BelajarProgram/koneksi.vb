@@ -5,10 +5,10 @@
     Protected ds As DataSet
     Protected dt As DataTable
     Protected conString As String
-    Protected svrName As String = "WNH-PC\SQLEXPRESS"
+    Protected svrName As String = "BINTANG\BIND"
     Protected svrData As String = "POS"
     Protected svrUser As String = "sa"
-    Protected svrPass As String = "123"
+    Protected svrPass As String = "Asevvenx"
 
     Public Function openconn() As Boolean
         Try
@@ -67,4 +67,5 @@
         cmd = Nothing
         closeconn()
     End Sub
+
 End Class

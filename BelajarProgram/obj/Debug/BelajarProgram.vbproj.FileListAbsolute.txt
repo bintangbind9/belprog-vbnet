@@ -29,3 +29,25 @@ C:\Belajar Program\VB Net\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.
 C:\Belajar Program\VB Net\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.Jenis_frm.resources
 C:\Belajar Program\VB Net\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.satuan_frm.resources
 C:\Belajar Program\VB Net\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.brg_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\bin\Debug\BelajarProgram.exe.config
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\bin\Debug\BelajarProgram.exe
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\bin\Debug\BelajarProgram.pdb
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\bin\Debug\BelajarProgram.xml
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.vbprojAssemblyReference.cache
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.brg_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.Jenis_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.Login_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.Main_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.Resources.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.satuan_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.user_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.vbproj.GenerateResource.cache
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.vbproj.CoreCompileInputs.cache
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.exe
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.xml
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.pdb
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.cust_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.supplier_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.pembelian_frm.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.pembelian_frm_tambah.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.pembelian_frm_tambah_detail.resources

@@ -26,6 +26,7 @@ Partial Class Main_frm
         Me.AdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JenisBarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SatuanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BarangProdukToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,7 +46,6 @@ Partial Class Main_frm
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.JenisBarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -79,45 +79,52 @@ Partial Class Main_frm
         Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.MasterToolStripMenuItem.Text = "Master"
         '
+        'JenisBarangToolStripMenuItem
+        '
+        Me.JenisBarangToolStripMenuItem.Image = Global.BelajarProgram.My.Resources.Resources.left_justification_button
+        Me.JenisBarangToolStripMenuItem.Name = "JenisBarangToolStripMenuItem"
+        Me.JenisBarangToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.JenisBarangToolStripMenuItem.Text = "Jenis Barang"
+        '
         'SatuanToolStripMenuItem
         '
         Me.SatuanToolStripMenuItem.Name = "SatuanToolStripMenuItem"
-        Me.SatuanToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SatuanToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.SatuanToolStripMenuItem.Text = "Satuan"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(151, 6)
         '
         'BarangProdukToolStripMenuItem
         '
         Me.BarangProdukToolStripMenuItem.Name = "BarangProdukToolStripMenuItem"
-        Me.BarangProdukToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BarangProdukToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.BarangProdukToolStripMenuItem.Text = "Barang/Produk"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(151, 6)
         '
         'CustomerToolStripMenuItem
         '
         Me.CustomerToolStripMenuItem.Name = "CustomerToolStripMenuItem"
-        Me.CustomerToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CustomerToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.CustomerToolStripMenuItem.Text = "Customer"
         '
         'SupplierToolStripMenuItem
         '
         Me.SupplierToolStripMenuItem.Name = "SupplierToolStripMenuItem"
-        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.SupplierToolStripMenuItem.Text = "Supplier"
         '
         'TransaksiToolStripMenuItem
         '
         Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PembelianToolStripMenuItem, Me.PenjualanToolStripMenuItem, Me.StokToolStripMenuItem})
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
-        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
+        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.TransaksiToolStripMenuItem.Text = "Transaksi"
         '
         'PembelianToolStripMenuItem
@@ -178,7 +185,7 @@ Partial Class Main_frm
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(38, 20)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'StatusStrip1
@@ -193,15 +200,8 @@ Partial Class Main_frm
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(22, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(25, 17)
         Me.ToolStripStatusLabel1.Text = "xxx"
-        '
-        'JenisBarangToolStripMenuItem
-        '
-        Me.JenisBarangToolStripMenuItem.Image = Global.BelajarProgram.My.Resources.Resources.left_justification_button
-        Me.JenisBarangToolStripMenuItem.Name = "JenisBarangToolStripMenuItem"
-        Me.JenisBarangToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.JenisBarangToolStripMenuItem.Text = "Jenis Barang"
         '
         'Main_frm
         '
@@ -216,6 +216,7 @@ Partial Class Main_frm
         Me.Name = "Main_frm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Point Of Sales"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class brg_frm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class brg_frm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.lblid = New System.Windows.Forms.Label()
@@ -33,18 +33,18 @@ Partial Class brg_frm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TbJenisBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New BelajarProgram.DataSet1()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.DataSet1 = New BelajarProgram.DataSet1()
-        Me.TbJenisBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TbJenisTableAdapter = New BelajarProgram.DataSet1TableAdapters.tbJenisTableAdapter()
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbJenisBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblid
@@ -133,15 +133,22 @@ Partial Class brg_frm
         '
         'ComboBox1
         '
-        Me.ComboBox1.DataSource = Me.TbJenisBindingSource
-        Me.ComboBox1.DisplayMember = "JenisBrg"
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(112, 35)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(152, 21)
         Me.ComboBox1.TabIndex = 37
-        Me.ComboBox1.ValueMember = "idjenis"
+        '
+        'TbJenisBindingSource
+        '
+        Me.TbJenisBindingSource.DataMember = "tbJenis"
+        Me.TbJenisBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label3
         '
@@ -154,6 +161,8 @@ Partial Class brg_frm
         '
         'ComboBox2
         '
+        Me.ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(112, 93)
         Me.ComboBox2.Name = "ComboBox2"
@@ -194,16 +203,6 @@ Partial Class brg_frm
         Me.TextBox3.TabIndex = 43
         Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TbJenisBindingSource
-        '
-        Me.TbJenisBindingSource.DataMember = "tbJenis"
-        Me.TbJenisBindingSource.DataSource = Me.DataSet1
-        '
         'TbJenisTableAdapter
         '
         Me.TbJenisTableAdapter.ClearBeforeFill = True
@@ -232,8 +231,8 @@ Partial Class brg_frm
         Me.Name = "brg_frm"
         Me.Text = "Master Barang"
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbJenisBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

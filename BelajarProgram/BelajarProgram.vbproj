@@ -52,6 +52,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -77,6 +78,12 @@
       <DependentUpon>brg_frm.vb</DependentUpon>
     </Compile>
     <Compile Include="brg_frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cust_frm.Designer.vb">
+      <DependentUpon>cust_frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cust_frm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataSet1.Designer.vb">
@@ -120,10 +127,34 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="pembelian_frm.Designer.vb">
+      <DependentUpon>pembelian_frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pembelian_frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pembelian_frm_tambah.Designer.vb">
+      <DependentUpon>pembelian_frm_tambah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pembelian_frm_tambah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pembelian_frm_tambah_detail.Designer.vb">
+      <DependentUpon>pembelian_frm_tambah_detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pembelian_frm_tambah_detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="satuan_frm.Designer.vb">
       <DependentUpon>satuan_frm.vb</DependentUpon>
     </Compile>
     <Compile Include="satuan_frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplier_frm.Designer.vb">
+      <DependentUpon>supplier_frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="supplier_frm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="umum.vb" />
@@ -137,6 +168,9 @@
   <ItemGroup>
     <EmbeddedResource Include="brg_frm.resx">
       <DependentUpon>brg_frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cust_frm.resx">
+      <DependentUpon>cust_frm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Jenis_frm.resx">
       <DependentUpon>Jenis_frm.vb</DependentUpon>
@@ -153,8 +187,20 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="pembelian_frm.resx">
+      <DependentUpon>pembelian_frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pembelian_frm_tambah.resx">
+      <DependentUpon>pembelian_frm_tambah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pembelian_frm_tambah_detail.resx">
+      <DependentUpon>pembelian_frm_tambah_detail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="satuan_frm.resx">
       <DependentUpon>satuan_frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supplier_frm.resx">
+      <DependentUpon>supplier_frm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_frm.resx">
       <DependentUpon>user_frm.vb</DependentUpon>
