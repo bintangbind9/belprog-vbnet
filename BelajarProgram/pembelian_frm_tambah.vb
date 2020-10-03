@@ -17,6 +17,8 @@
             .Show()
             .BringToFront()
             .StartPosition = FormStartPosition.CenterScreen
+            .lblID.Text = ""
+            .Text = "Add Detail"
         End With
     End Sub
 
@@ -45,13 +47,17 @@
                             .Rows(i).Cells("harga").Value & ", " &
                             Aphostrophe(.Rows(i).Cells("note").Value) & ")"
                         proses.executenonquery(sqLstr)
+
+                        sqLstr = "UPDATE msbrg SET qty = qty + " & .Rows(i).Cells("qty_beli").Value & "
+                                  WHERE idbrg=" & .Rows(i).Cells("id_barang").Value
+                        proses.executenonquery(sqLstr)
                     Next
                     MsgBox("Berhasil Tambah Data")
                 End With
                 Me.Close()
                 pembelian_frm.Enabled = True
                 pembelian_frm.isiGridHead()
-                pembelian_frm.DataGridView1.CurrentCell = DataGridView1.Rows(0).Cells(1)
+                'pembelian_frm.DataGridView1.CurrentCell = DataGridView1.Rows(0).Cells(1)
                 pembelian_frm.isiGridDetail()
             Else
                 'Update

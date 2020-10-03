@@ -25,6 +25,7 @@ Partial Class pembelian_frm
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView2Hapus = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -53,10 +54,20 @@ Partial Class pembelian_frm
         '
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridView2Hapus})
         Me.DataGridView2.Location = New System.Drawing.Point(12, 256)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(776, 226)
         Me.DataGridView2.TabIndex = 1
+        '
+        'DataGridView2Hapus
+        '
+        Me.DataGridView2Hapus.HeaderText = "Action"
+        Me.DataGridView2Hapus.Name = "DataGridView2Hapus"
+        Me.DataGridView2Hapus.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2Hapus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridView2Hapus.Text = "Hapus"
+        Me.DataGridView2Hapus.UseColumnTextForButtonValue = True
         '
         'Button1
         '
@@ -166,4 +177,5 @@ Partial Class pembelian_frm
     Friend WithEvents Button7 As Button
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents DataSet1BindingSource As BindingSource
+    Friend WithEvents DataGridView2Hapus As DataGridViewButtonColumn
 End Class

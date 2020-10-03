@@ -51,3 +51,4 @@ C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\Bel
 C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.pembelian_frm.resources
 C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.pembelian_frm_tambah.resources
 C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.pembelian_frm_tambah_detail.resources
+C:\Users\Bintang Saputra\Documents\Visual Studio 2019\Projects\belprog-vbnet\BelajarProgram\obj\Debug\BelajarProgram.pembelian_frm_edit.resources

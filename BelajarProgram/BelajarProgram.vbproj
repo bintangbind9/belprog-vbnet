@@ -133,6 +133,12 @@
     <Compile Include="pembelian_frm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="pembelian_frm_edit.Designer.vb">
+      <DependentUpon>pembelian_frm_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pembelian_frm_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="pembelian_frm_tambah.Designer.vb">
       <DependentUpon>pembelian_frm_tambah.vb</DependentUpon>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pembelian_frm.resx">
       <DependentUpon>pembelian_frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pembelian_frm_edit.resx">
+      <DependentUpon>pembelian_frm_edit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pembelian_frm_tambah.resx">
       <DependentUpon>pembelian_frm_tambah.vb</DependentUpon>
