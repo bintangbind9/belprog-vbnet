@@ -1,8 +1,9 @@
-﻿Public Class pembelian_frm
-    Private Sub pembelian_frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class penjualan_frm
+
+    Private Sub penjualan_frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         isiGridHead()
         DataGridView1.Columns("ID Transaksi").Visible = False
-        DataGridView1.Columns("ID Supplier").Visible = False
+        DataGridView1.Columns("ID Customer").Visible = False
         DataGridView1.Columns("ID User").Visible = False
         If DataGridView1.Rows.Count > 0 Then
             DataGridView1.CurrentCell = DataGridView1.Rows(0).Cells(1)
@@ -14,7 +15,7 @@
         If DataGridView1.Rows.Count > 0 Then
             'Dim idtr As Integer = DataGridView1.Item("ID Transaksi", DataGridView1.CurrentRow.Index).Value
             Dim idtr As Integer = DataGridView1.CurrentRow.Cells(0).Value
-            sqLstr = "SELECT TOP(100) * FROM View_DetailBeli WHERE [ID Transaksi]=" & idtr & ""
+            sqLstr = "SELECT TOP(100) * FROM View_DetailJual WHERE [ID Transaksi]=" & idtr & ""
             tabel = proses.executequery(sqLstr)
             DataGridView2.DataSource = tabel
         Else
@@ -23,13 +24,13 @@
     End Sub
 
     Sub isiGridHead()
-        sqLstr = "SELECT TOP(100) * FROM View_HeadBeli ORDER BY [Tanggal] DESC"
+        sqLstr = "SELECT TOP(100) * FROM View_HeadJual ORDER BY [Tanggal] DESC"
         tabel = proses.executequery(sqLstr)
         DataGridView1.DataSource = tabel
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        With pembelian_frm_tambah
+        With penjualan_frm_tambah
             .MdiParent = Main_frm
             .Show()
             .BringToFront()
@@ -52,17 +53,17 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If DataGridView1.Rows.Count > 0 Then
             Dim idTrans As Integer = DataGridView1.CurrentRow.Cells(0).Value
-            With pembelian_frm_edit
+            With penjualan_frm_edit
                 .Show()
                 .MdiParent = Main_frm
                 .Focus()
-                .isiComboSupplier()
-                sqLstr = "SELECT * FROM TrBeliHead WHERE idTransaksi=" & idTrans
+                .isiComboCustomer()
+                sqLstr = "SELECT * FROM TrJualHead WHERE idTransaksi=" & idTrans
                 tabel = proses.executequery(sqLstr)
                 .lblID.Text = idTrans
                 Dim tgl As Date = tabel.Rows(0).Item("Tgl")
                 .lblTgl.Text = Format(tgl, "dd MMM yyyy")
-                .cbSupplier.SelectedValue = tabel.Rows(0).Item("idSupplier")
+                .cbCustomer.SelectedValue = tabel.Rows(0).Item("idCustomer")
                 .tbNote.Text = tabel.Rows(0).Item("Keterangan").ToString
             End With
         Else
@@ -72,7 +73,7 @@
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         If DataGridView1.Rows.Count > 0 Then
-            With pembelian_frm_tambah_detail
+            With penjualan_frm_tambah_detail
                 .Show()
                 .MdiParent = Main_frm
                 .Focus()
@@ -86,14 +87,14 @@
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         If DataGridView2.Rows.Count > 0 Then
-            With pembelian_frm_tambah_detail
+            With penjualan_frm_tambah_detail
+                .Text = "Edit Detail"
+                .currentIdBrg = DataGridView2.CurrentRow.Cells("ID Barang").Value
+                .currentStock = DataGridView2.CurrentRow.Cells("Qty").Value
                 .Show()
                 .MdiParent = Main_frm
                 .Focus()
-                .Text = "Edit Detail"
                 .lblID.Text = DataGridView1.CurrentRow.Cells("ID Transaksi").Value
-                .currentStock = DataGridView2.CurrentRow.Cells("Qty").Value
-                .currentIdBrg = DataGridView2.CurrentRow.Cells("ID Barang").Value
                 .ComboBox1.SelectedValue = DataGridView2.CurrentRow.Cells("ID Barang").Value
                 .TextBox1.Text = DataGridView2.CurrentRow.Cells("Qty").Value
                 .TextBox2.Text = DataGridView2.CurrentRow.Cells("Keterangan").Value
@@ -113,10 +114,10 @@
             tny = MsgBox("Yakin Hapus data?", MsgBoxStyle.YesNo, "Hapus data")
             If tny = vbYes Then
                 Dim id As Integer = DataGridView2.CurrentRow.Cells("ID Trans Detail").Value
-                sqLstr = "SELECT * FROM TrBeliDetail WHERE idTransDetail=" & id
+                sqLstr = "SELECT * FROM TrJualDetail WHERE idTransDetail=" & id
                 tabel = proses.executequery(sqLstr)
-                sqLstr = "UPDATE msbrg SET qty = qty - " & tabel.Rows(0).Item(3) & " WHERE idbrg=" & tabel.Rows(0).Item(2) & ";
-                      DELETE FROM TrBeliDetail WHERE idTransDetail = " & id
+                sqLstr = "UPDATE msbrg SET qty = qty + " & tabel.Rows(0).Item(3) & " WHERE idbrg=" & tabel.Rows(0).Item(2) & ";
+                      DELETE FROM TrJualDetail WHERE idTransDetail = " & id
                 proses.executenonquery(sqLstr)
                 MsgBox("Berhasil hapus data")
                 isiGridDetail()
@@ -130,15 +131,15 @@
             tny = MsgBox("Yakin Hapus data beserta detail barangnya?", MsgBoxStyle.YesNo, "Hapus data")
             If tny = vbYes Then
                 Dim id As Integer = DataGridView1.CurrentRow.Cells("ID Transaksi").Value
-                sqLstr = "SELECT * FROM TrBeliDetail WHERE idTransHead = " & id
+                sqLstr = "SELECT * FROM TrJualDetail WHERE idTransHead = " & id
                 tabel = proses.executequery(sqLstr)
                 For i As Integer = 0 To tabel.Rows.Count - 1
-                    sqLstr = "UPDATE msbrg SET qty = qty - " & tabel.Rows(i).Item(3) & " WHERE idbrg=" & tabel.Rows(i).Item(2)
+                    sqLstr = "UPDATE msbrg SET qty = qty + " & tabel.Rows(i).Item(3) & " WHERE idbrg=" & tabel.Rows(i).Item(2)
                     proses.executenonquery(sqLstr)
                 Next
 
-                sqLstr = "DELETE FROM [POS].[dbo].[TrBeliDetail] WHERE [idTransHead] = " & id & ";
-                      DELETE FROM [POS].[dbo].[TrBeliHead] WHERE [idTransaksi] = " & id & ";"
+                sqLstr = "DELETE FROM [POS].[dbo].[TrJualDetail] WHERE [idTransHead] = " & id & ";
+                      DELETE FROM [POS].[dbo].[TrJualHead] WHERE [idTransaksi] = " & id & ";"
                 proses.executenonquery(sqLstr)
 
                 MsgBox("Berhasil hapus data")
@@ -150,4 +151,7 @@
         End If
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Close()
+    End Sub
 End Class

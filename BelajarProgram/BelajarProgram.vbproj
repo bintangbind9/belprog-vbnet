@@ -48,6 +48,24 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -74,16 +92,21 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="brg_frm.Designer.vb">
+    <Compile Include="DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Master\brg_frm.Designer.vb">
       <DependentUpon>brg_frm.vb</DependentUpon>
     </Compile>
-    <Compile Include="brg_frm.vb">
+    <Compile Include="Master\brg_frm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cust_frm.Designer.vb">
+    <Compile Include="Master\cust_frm.Designer.vb">
       <DependentUpon>cust_frm.vb</DependentUpon>
     </Compile>
-    <Compile Include="cust_frm.vb">
+    <Compile Include="Master\cust_frm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataSet1.Designer.vb">
@@ -91,10 +114,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Jenis_frm.Designer.vb">
+    <Compile Include="Master\Jenis_frm.Designer.vb">
       <DependentUpon>Jenis_frm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Jenis_frm.vb">
+    <Compile Include="Master\Jenis_frm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login_frm.vb">
@@ -127,58 +150,82 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="pembelian_frm.Designer.vb">
+    <Compile Include="Transaksi\Pembelian\pembelian_frm.Designer.vb">
       <DependentUpon>pembelian_frm.vb</DependentUpon>
     </Compile>
-    <Compile Include="pembelian_frm.vb">
+    <Compile Include="Transaksi\Pembelian\pembelian_frm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pembelian_frm_edit.Designer.vb">
+    <Compile Include="Transaksi\Pembelian\pembelian_frm_edit.Designer.vb">
       <DependentUpon>pembelian_frm_edit.vb</DependentUpon>
     </Compile>
-    <Compile Include="pembelian_frm_edit.vb">
+    <Compile Include="Transaksi\Pembelian\pembelian_frm_edit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pembelian_frm_tambah.Designer.vb">
+    <Compile Include="Transaksi\Pembelian\pembelian_frm_tambah.Designer.vb">
       <DependentUpon>pembelian_frm_tambah.vb</DependentUpon>
     </Compile>
-    <Compile Include="pembelian_frm_tambah.vb">
+    <Compile Include="Transaksi\Pembelian\pembelian_frm_tambah.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pembelian_frm_tambah_detail.Designer.vb">
+    <Compile Include="Transaksi\Pembelian\pembelian_frm_tambah_detail.Designer.vb">
       <DependentUpon>pembelian_frm_tambah_detail.vb</DependentUpon>
     </Compile>
-    <Compile Include="pembelian_frm_tambah_detail.vb">
+    <Compile Include="Transaksi\Pembelian\pembelian_frm_tambah_detail.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="satuan_frm.Designer.vb">
+    <Compile Include="Master\satuan_frm.Designer.vb">
       <DependentUpon>satuan_frm.vb</DependentUpon>
     </Compile>
-    <Compile Include="satuan_frm.vb">
+    <Compile Include="Master\satuan_frm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="supplier_frm.Designer.vb">
+    <Compile Include="Master\supplier_frm.Designer.vb">
       <DependentUpon>supplier_frm.vb</DependentUpon>
     </Compile>
-    <Compile Include="supplier_frm.vb">
+    <Compile Include="Master\supplier_frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\penjualan_frm.Designer.vb">
+      <DependentUpon>penjualan_frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\penjualan_frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\penjualan_frm_edit.Designer.vb">
+      <DependentUpon>penjualan_frm_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\penjualan_frm_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\penjualan_frm_tambah.Designer.vb">
+      <DependentUpon>penjualan_frm_tambah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\penjualan_frm_tambah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\penjualan_frm_tambah_detail.Designer.vb">
+      <DependentUpon>penjualan_frm_tambah_detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\penjualan_frm_tambah_detail.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="umum.vb" />
-    <Compile Include="user_frm.Designer.vb">
+    <Compile Include="Admin\user_frm.Designer.vb">
       <DependentUpon>user_frm.vb</DependentUpon>
     </Compile>
-    <Compile Include="user_frm.vb">
+    <Compile Include="Admin\user_frm.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="brg_frm.resx">
+    <EmbeddedResource Include="Master\brg_frm.resx">
       <DependentUpon>brg_frm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cust_frm.resx">
+    <EmbeddedResource Include="Master\cust_frm.resx">
       <DependentUpon>cust_frm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Jenis_frm.resx">
+    <EmbeddedResource Include="Master\Jenis_frm.resx">
       <DependentUpon>Jenis_frm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_frm.resx">
@@ -193,26 +240,38 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="pembelian_frm.resx">
+    <EmbeddedResource Include="Transaksi\Pembelian\pembelian_frm.resx">
       <DependentUpon>pembelian_frm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pembelian_frm_edit.resx">
+    <EmbeddedResource Include="Transaksi\Pembelian\pembelian_frm_edit.resx">
       <DependentUpon>pembelian_frm_edit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pembelian_frm_tambah.resx">
+    <EmbeddedResource Include="Transaksi\Pembelian\pembelian_frm_tambah.resx">
       <DependentUpon>pembelian_frm_tambah.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pembelian_frm_tambah_detail.resx">
+    <EmbeddedResource Include="Transaksi\Pembelian\pembelian_frm_tambah_detail.resx">
       <DependentUpon>pembelian_frm_tambah_detail.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="satuan_frm.resx">
+    <EmbeddedResource Include="Master\satuan_frm.resx">
       <DependentUpon>satuan_frm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="supplier_frm.resx">
+    <EmbeddedResource Include="Master\supplier_frm.resx">
       <DependentUpon>supplier_frm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user_frm.resx">
+    <EmbeddedResource Include="Admin\user_frm.resx">
       <DependentUpon>user_frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penjualan\penjualan_frm.resx">
+      <DependentUpon>penjualan_frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penjualan\penjualan_frm_edit.resx">
+      <DependentUpon>penjualan_frm_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penjualan\penjualan_frm_tambah.resx">
+      <DependentUpon>penjualan_frm_tambah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penjualan\penjualan_frm_tambah_detail.resx">
+      <DependentUpon>penjualan_frm_tambah_detail.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +286,17 @@
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -239,7 +309,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\left-justification-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

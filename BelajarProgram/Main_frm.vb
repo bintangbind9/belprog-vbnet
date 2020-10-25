@@ -80,4 +80,13 @@
             .Left = 0
         End With
     End Sub
+
+    Private Sub PenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PenjualanToolStripMenuItem.Click
+        With penjualan_frm
+            .MdiParent = Me
+            .Show()
+            .Top = 0
+            .Left = 0
+        End With
+    End Sub
 End Class

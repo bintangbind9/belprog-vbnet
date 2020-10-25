@@ -27,15 +27,9 @@ Partial Class pembelian_frm_tambah
         Me.lblTgl = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataSet1 = New BelajarProgram.DataSet1()
         Me.MssupplierBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MssupplierTableAdapter = New BelajarProgram.DataSet1TableAdapters.mssupplierTableAdapter()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DataSet1 = New BelajarProgram.DataSet1()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.id_barang = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.jenis_barang = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nama_barang = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,9 +37,15 @@ Partial Class pembelian_frm_tambah
         Me.harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.qty_beli = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.note = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MssupplierTableAdapter = New BelajarProgram.DataSet1TableAdapters.mssupplierTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.MssupplierBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblID
@@ -86,6 +86,16 @@ Partial Class pembelian_frm_tambah
         Me.ComboBox1.TabIndex = 3
         Me.ComboBox1.ValueMember = "idsupplier"
         '
+        'MssupplierBindingSource
+        '
+        Me.MssupplierBindingSource.DataMember = "mssupplier"
+        Me.MssupplierBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -96,15 +106,40 @@ Partial Class pembelian_frm_tambah
         Me.DataGridView1.Size = New System.Drawing.Size(638, 185)
         Me.DataGridView1.TabIndex = 4
         '
-        'DataSet1
+        'id_barang
         '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.id_barang.HeaderText = "ID Barang"
+        Me.id_barang.Name = "id_barang"
         '
-        'MssupplierBindingSource
+        'jenis_barang
         '
-        Me.MssupplierBindingSource.DataMember = "mssupplier"
-        Me.MssupplierBindingSource.DataSource = Me.DataSet1
+        Me.jenis_barang.HeaderText = "Jenis Barang"
+        Me.jenis_barang.Name = "jenis_barang"
+        '
+        'nama_barang
+        '
+        Me.nama_barang.HeaderText = "Nama Barang"
+        Me.nama_barang.Name = "nama_barang"
+        '
+        'satuan
+        '
+        Me.satuan.HeaderText = "Satuan"
+        Me.satuan.Name = "satuan"
+        '
+        'harga
+        '
+        Me.harga.HeaderText = "Harga"
+        Me.harga.Name = "harga"
+        '
+        'qty_beli
+        '
+        Me.qty_beli.HeaderText = "Qty Beli"
+        Me.qty_beli.Name = "qty_beli"
+        '
+        'note
+        '
+        Me.note.HeaderText = "Keterangan"
+        Me.note.Name = "note"
         '
         'MssupplierTableAdapter
         '
@@ -154,41 +189,6 @@ Partial Class pembelian_frm_tambah
         Me.TextBox1.Size = New System.Drawing.Size(268, 40)
         Me.TextBox1.TabIndex = 9
         '
-        'id_barang
-        '
-        Me.id_barang.HeaderText = "ID Barang"
-        Me.id_barang.Name = "id_barang"
-        '
-        'jenis_barang
-        '
-        Me.jenis_barang.HeaderText = "Jenis Barang"
-        Me.jenis_barang.Name = "jenis_barang"
-        '
-        'nama_barang
-        '
-        Me.nama_barang.HeaderText = "Nama Barang"
-        Me.nama_barang.Name = "nama_barang"
-        '
-        'satuan
-        '
-        Me.satuan.HeaderText = "Satuan"
-        Me.satuan.Name = "satuan"
-        '
-        'harga
-        '
-        Me.harga.HeaderText = "Harga"
-        Me.harga.Name = "harga"
-        '
-        'qty_beli
-        '
-        Me.qty_beli.HeaderText = "Qty Beli"
-        Me.qty_beli.Name = "qty_beli"
-        '
-        'note
-        '
-        Me.note.HeaderText = "Keterangan"
-        Me.note.Name = "note"
-        '
         'pembelian_frm_tambah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -205,10 +205,10 @@ Partial Class pembelian_frm_tambah
         Me.Controls.Add(Me.lblTgl)
         Me.Controls.Add(Me.lblID)
         Me.Name = "pembelian_frm_tambah"
-        Me.Text = "Tambah Transaksi"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Tambah Transaksi Pembelian"
         CType(Me.MssupplierBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

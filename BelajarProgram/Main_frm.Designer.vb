@@ -130,19 +130,19 @@ Partial Class Main_frm
         'PembelianToolStripMenuItem
         '
         Me.PembelianToolStripMenuItem.Name = "PembelianToolStripMenuItem"
-        Me.PembelianToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.PembelianToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PembelianToolStripMenuItem.Text = "Pembelian"
         '
         'PenjualanToolStripMenuItem
         '
         Me.PenjualanToolStripMenuItem.Name = "PenjualanToolStripMenuItem"
-        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PenjualanToolStripMenuItem.Text = "Penjualan"
         '
         'StokToolStripMenuItem
         '
         Me.StokToolStripMenuItem.Name = "StokToolStripMenuItem"
-        Me.StokToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.StokToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StokToolStripMenuItem.Text = "Stok"
         '
         'LaporanToolStripMenuItem
